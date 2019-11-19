@@ -21,7 +21,7 @@ var exphbs = require("express-handlebars");
 app.set("view engine", "handlebars");*/
 
 // Require all models
-var db = require("./models/Index");
+var db = require("./models/index");
 
 var PORT = 3000;
 
@@ -39,7 +39,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB with Heroku
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://<user>:<kershaw19>@ds347298.mlab.com:47298/heroku_bwh0stlk";
 
 mongoose.connect(MONGODB_URI);
 
